@@ -557,7 +557,7 @@ GLGE.ParticleSystem.prototype.loop=1;
 * @param {function} func the new function
 */
 GLGE.ParticleSystem.prototype.setVelocityFunction=function(func){
-	this.vecoityFunction=func;
+	this.velocityFunction=func;
 	this.particles=null;
 }
 /**
@@ -693,7 +693,7 @@ GLGE.ParticleSystem.prototype.generateProgram=function(gl){
 	"}"
 	].join("");
 	frgShader=[
-	"#ifdef GL_ES\nprecision mediump float;\n#endif\n",
+	"#ifdef GL_ES\nprecision highp float;\n#endif\n",
 	//uniforms
 	"uniform sampler2D texture;",
 	//varying
