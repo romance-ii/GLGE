@@ -118,11 +118,11 @@ if(isHelp) return;
 	
 if(FLAGS.uglify){
 	try{
-		var jsp = require("./external/uglifyjs/lib/parse-js");
-		var pro = require("./external/uglifyjs/lib/process");
+		var jsp = require("./external/uglifyjs/lib/parse.js");
+		var pro = require("./external/uglifyjs/lib/ast.js");
 	}catch(e){
 		FLAGS.uglify=false;
-		sys.print(">> ERROR: UglifyJS unavailable\n");
+		sys.print(">> ERROR: UglifyJS unavailable\n" +e);
 	}
 }
 
